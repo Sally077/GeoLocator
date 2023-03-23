@@ -34,45 +34,46 @@ function Game() {
   }
 
   return (
-    <Grid container spacing={2} justifyContent="center" alignItems="center">
-      <Grid item xs={12}>
+    <Grid className='mainFrame' container spacing={2} justifyContent="center" alignItems="center">
+      <Grid item xs={10}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
           <h1>Geoguesser Clone</h1>
-          <p>Score: {score}</p>
+          <h5>Score: {score}</h5>
         </motion.div>
       </Grid>
-      <Grid item xs={12}>
-        <motion.img
-          src={country.flag}
-          alt={`${country.name} flag`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        />
-      </Grid>
-      <Grid item xs={6}>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => handleAnswer(country.capital)}
-          fullWidth
-        >
-          {country.capital}
-        </Button>
-      </Grid>
-      <Grid item xs={6}>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() => handleAnswer('')}
-          fullWidth
-        >
-          Skip
-        </Button>
+      <Grid className='midFrame' container item xs={10} spacing={2}>
+        <Grid className='flag' container item xs={5}>
+          <motion.img
+            src={country.flag}
+            alt={`${country.name} flag`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}/>
+        </Grid>
+        <Grid container item xs={10} spacing={2}>
+          <Grid item xs={5}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => handleAnswer(country.capital)}
+              fullWidth>
+              {country.capital}
+            </Button>
+          </Grid>
+          <Grid item xs={5}>
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => handleAnswer('')}
+              fullWidth>
+              Skip
+            </Button>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
