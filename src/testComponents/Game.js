@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button, Grid } from '@material-ui/core';
 
+
 function Game() {
   const [score, setScore] = useState(0);
   const [country, setCountry] = useState(null);
@@ -80,3 +81,5 @@ function Game() {
 }
 
 export default Game;
+
+
