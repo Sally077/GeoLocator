@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useState, useEffect } from "react";
 import { Grid, Paper,  Button } from "@mui/material";
 import { render } from "react-dom";
@@ -10,14 +10,20 @@ console.log("Test")
 function Timer()  {
     const btnstyle = {margin: "8px 0", color: "custom color"}
     const  paperStyle = {padding : 20, height : '20vh', width: 120, margin: "left"}
-    const [counter, setCounter] = React.useState(120);
+    const [counter, setCounter] = useState(120);
+    const [isActive, setIsActive] =  useState(false)
    
 
-    React.useEffect(() => {
-        counter > 0 && setTimeout(() => setCounter(counter - 1),1000);
-    },[counter]);
-
     
+    const startTimer = ()=>{
+        setIsActive(true)
+    }
+    useEffect(() => {
+        
+        if(counter > 0 && isActive){
+         setTimeout(() => setCounter(counter - 1),1000);  
+        }
+    });
 
     return (
         <>
@@ -28,7 +34,7 @@ function Timer()  {
                 <h1>Timer</h1>
                 <div className="Timer"></div>
         <div>Countdown: {counter}</div>
-            <Button type="Start" color="custom color" variant="contained" style={btnstyle}>Start</Button>
+            <Button type="Start"  style={btnstyle} onClick={()=> setIsActive(true)}>Start</Button>
             </Grid>
             </Paper>
             </Grid>

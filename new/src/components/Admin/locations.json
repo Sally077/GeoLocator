@@ -1,0 +1,118 @@
+[
+    {
+        "id": 1,
+        "name": "Leif Eriksson Monument",
+        "latitude": "64.14262902221166",
+        "longitude": "-21.92749690174733",
+        "image": "https://www.alamy.com/europe-iceland-statue-of-leif-erikson-historic-explorer-front-of-the-futuristic-spire-and-concrete-columns-of-hallgrimskirkja-the-iconic-lutheran-church-in-reykjavik-image346835562.html",
+        "iframe": "<iframe src='https://www.google.com/maps/embed?pb=!4v1679566774515!6m8!1m7!1sEepN92C6sQK9wclC94hs3A!2m2!1d64.14260954902629!2d-21.92786600679261!3f135.06!4f5.730000000000004!5f0.7820865974627469' width='100%' height='600' frameBorder='0' allowFullScreen='' loading='lazy' referrerPolicy='no-referrer-when-downgrade'></iframe>",
+        "POI": [
+            "The Icelandic Phallological Museum (Hið Íslenzka Reðasafn)",
+            "Sun Voyager",
+            "Bastard Brew & Food"
+        ],
+        "category": "Easy"
+    },
+
+    {
+        "id": 2,
+        "name": "Angel of the North",
+        "latitude": "54.91427022113194",
+        "longitude": "-1.5894619749812686",
+        "image": "https://www.alamy.com/angle-of-the-north-near-newcastle-upon-tyne-in-the-north-of-england-image243342907.html",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679578103900!6m8!1m7!1sCAoSLEFGMVFpcE9aYlVHLXdnR0VUVlhnRkJySFRhc2RhcGN0elR5T0FseXpiNXZX!2m2!1d54.91398981661959!2d-1.589383855462074!3f341.56!4f26.689999999999998!5f0.4000000000000002\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Ravensworth Arms",
+            "The Royal Oak Inn",
+            "The Gateshead Arms"
+        ],
+        "category": "Easy"
+    },
+    {
+        "id": 3,
+        "name": "Machu Picchu",
+        "latitude": "-13.226195015515124",
+        "longitude": "-72.49735368932217",
+        "image": "../../assets/matchupicchu.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679603424529!6m8!1m7!1s-DZ8rHZ5d6CB1YbUNGppmA!2m2!1d-13.22949045931041!2d-72.50115899010625!3f67.06020507626127!4f-7.363031636609961!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Huayna Picchu",
+            "Machu Picchu Mountain",
+            "Intipunku (Sun Gate)"
+        ],
+           
+        "category": "Moderate"
+    },
+    {
+        "id": 4,
+        "name": "Petra",
+        "latitude": "30.330084241444784",
+        "longitude": "35.44951204168403",
+        "image": "../../assets/petra.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679603585026!6m8!1m7!1sCAoSLEFGMVFpcFBsempQZFFtVXVqY3hLNE1zNzdJcEZ0YkRnb3lZeHRQSU5oQVQ5!2m2!1d30.33796764280633!2d35.43011967595925!3f82.67826046532099!4f8.392812270787786!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "The Treasury",
+            "The Monastery",
+            "The Royal Tombs"
+        ],
+           
+        "category": "Moderate"
+    },
+    {
+        "id": 5,
+        "name": "Sagrada Familia",
+        "latitude": "  41.403782779094264",
+        "longitude": "2.1743557978359345",
+        "image": "../../assets/sagradafamilia.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679603722713!6m8!1m7!1s0o8GUuPpQGwQDdEdKoz5PQ!2m2!1d41.40424167079257!2d2.174274123113673!3f175.4746273480419!4f22.99721265654422!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Park Guell",
+            "La Rambla",
+            "Casa Batllo"
+        ],
+        "category": "Moderate"
+    },
+   
+    {
+        "id": 6,
+        "name": "Great Wall of China",
+        "latitude": "40.43201384437531",
+        "longitude": "116.57040708431201",
+        "image": "../../assets/thechinesewall.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679604144521!6m8!1m7!1sCAoSLEFGMVFpcE9rWExTV2habzc3ZER6MXFNRkxFQmJZNUVQUC02ZnhjeWVOOHJY!2m2!1d40.44066957638386!2d116.5593964250799!3f278.2946548955645!4f-15.076486343600664!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Mutianyu Great Wall",
+            "Badaling Great Wall",
+            "Jinshanling Great Wall"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 7,
+        "name": "Salar de Uyuni",
+        "latitude": "-20.175031629723684",
+        "longitude": "-67.56768215201201",
+        "image": "../../assets/salardeyuni.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679605924534!6m8!1m7!1sCAoSLEFGMVFpcE5HU2ktSnh4VGN3UXVJY2dmSHBSRXNMWDhKWmt6WXpaelAtY2dC!2m2!1d-20.185513269411!2d-67.82125620490508!3f27.123033071923658!4f7.912609975301919!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Train Cemetery",
+            "Isla Incahuasi",
+            "Colchani"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 8,
+        "name": "Stonehenge",
+        "latitude": "   51.179036607667314",
+        "longitude": "-1.8262042868168011",
+        "image": "../../assets/stonehenge.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679607124570!6m8!1m7!1sX8zKV7yRPiP9ePmmIVaRjg!2m2!1d51.17871656821466!2d-1.826308572770358!3f31.865838400276665!4f-2.2686214540349567!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Heelstone",
+            "Stone Circle",
+            "Aubrey Holes"
+        ],
+        "category": "Moderate"
+    }
+]

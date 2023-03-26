@@ -1,0 +1,50 @@
+.mainFrame {
+  margin: 5% 15%;
+  box-sizing: border-box;
+}
+
+.MuiGrid-justify-content-xs-center {
+    justify-content: right !important;
+}
+
+img {
+    max-width: 20% !important;
+    max-height: 30%;
+}
+
+.midFrame {
+    /* margin: 0 auto !important; */
+    justify-items: center;
+}
+
+button {
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.6;
+    min-height: 2rem;
+    padding-top: 0.2rem;
+    position: relative;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: 100%;
+    margin-bottom: 0.6rem;
+    margin-right: 0.5rem;
+}
+
+button:hover {
+    border-color: #581e103f;
+    box-shadow: #581e102f 0 4px 12px;
+    color: rgb(247, 244, 244);
+    transform: translateY(-1px);
+}

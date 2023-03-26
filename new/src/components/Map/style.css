@@ -1,0 +1,36 @@
+.map {
+    position: "absolute";
+    opacity: 0.7;
+    bottom: 10 !important;
+    right: 10;
+    z-index: 1;
+    height: "300px";
+    width: "400px";
+}
+
+.map:hover {
+    opacity: 1.0;
+    height: "500px";
+    width: "600px";
+}
+
+.timeLeft {
+    position: "absolute";
+    top: 10;
+    right: 7;
+    z-index: 1; 
+    height: "40px"; 
+    width: "70px"; 
+    background-color: "grey";
+}
+
+.scores {
+    position: "absolute";
+    top: 10;
+    right: 0;
+    z-index: 1; 
+    height: "70px"; 
+    width: "100px"; 
+    background-color: "grey";
+    text-align: center;
+}

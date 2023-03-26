@@ -10,7 +10,7 @@ function TestApp() {
       <CssBaseline />
 
       {/* the id prop is what the home page will pass to Map. for now, to test the locations.json, manually plug in the id!!! */}
-      <Map id={8} />
+      <Map id={4} />
       {/* if you want our 'hello world flags thingy', comment the previous line and uncomment the next line!!! */}
       {/* <Game />   */}
       
