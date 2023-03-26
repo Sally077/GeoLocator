@@ -1,46 +1,46 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Grid, Paper,  Button } from "@material-ui/core";
+import { render } from "react-dom";
 
 console.log("Test")
 
+
 {/*const that returns countDownTimer*/}
-const Timer = () => {
-    const [minutes, setMinutes]=useState(0);
-    const [seconds, setSeconds]=useState(0);
-{/*setting a constant for deadline*/}
-    const deadline = Date.now;
+function Timer()  {
+    const btnstyle = {margin: "8px 0", color: "custom color"}
+    const  paperStyle = {padding : 20, height : '20vh', width: 120, margin: "left"}
+    const [counter, setCounter] = React.useState(120);
+   
 
+    React.useEffect(() => {
+        counter > 0 && setTimeout(() => setCounter(counter - 1),1000);
+    },[counter]);
 
-    const getTime = () => {
-        const time = Date.parse(deadline) - Date.now();
-{/*dividing minutes into seconds*/}
-        setMinutes(Math.floor((time /1000 / 60) % 60));
-        setSeconds(Math.floor((time /1000) % 60));
-
-    };
-{/*useEffect to set the interval time and clear the interval time*/}
-    useEffect(() => {
-        const interval = setInterval(() => getTime(deadline),1000);
-        return () => clearInterval(interval);
-
-    }, []);
     
 
     return (
-        <div className="timer">
-            <div className="Container">
-            <div className="timer_Container">
+        <>
+        
+            <Grid>
+            <Paper elevation={10} style={paperStyle}>
+                <Grid align="left">
                 <h1>Timer</h1>
+                <div className="Timer"></div>
+        <div>Countdown: {counter}</div>
+            <Button type="Start" color="custom color" variant="contained" style={btnstyle}>Start</Button>
+            </Grid>
+            </Paper>
+            </Grid>
+
+            </>
 
             
-            <span>minutes</span>
-            <span>seconds</span>
-            <button className="start">Start</button>
-        </div>
-        </div>
-        </div>
-
     );
 }
+
+
+const rootElement = document.getElementById("root");
+render(<Timer />, rootElement);
 
 export default Timer;
