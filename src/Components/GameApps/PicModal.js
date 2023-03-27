@@ -13,11 +13,15 @@ function PicModal({ selectImg, setSelectImg }) {
     return (
         <>
             <motion.div className='modalFrame' onClick={response}
-            initial={{opacity: 0, background: "rgba(0, 0, 0, 0.5)", y: "-100%"}}
-            animate={{opacity: 1, y: "0%"}}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
             transition={{ ease: 'easeIn', duration: 1 }}
             >
-            <img id='modalImg' src={selectImg} alt='display selection' />
+            <motion.img id='modalImg' src={selectImg} alt='display selection'
+             initial={{y: "-100%"}} 
+             animate={{y: "0%"}}
+             transition={{ ease: 'easeIn', duration: 0.6 }}
+            />
             </motion.div>
         </>
     )
