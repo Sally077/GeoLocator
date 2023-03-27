@@ -31,9 +31,11 @@ function SetPOI() {
       setError('');
     } else {
       setFile(null);
-      setError('Image type not valid, please use - svg, png, or jpeg');
+      setError('');
     }
   }
+
+  // Image type not valid, please use - svg, png, or jpeg
 
   const classes = useStyles();
 

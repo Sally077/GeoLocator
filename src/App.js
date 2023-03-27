@@ -3,6 +3,7 @@ import PicShow from './Components/GameApps/PicShow';
 import SetPOI from './Components/Admin/SetPOI';
 import PicModal from './Components/GameApps/PicModal';
 import Header from './Components/GameApps/Header';
+import './Components/Styles/Background.css'
 // import LoadButtons from './Components/Admin/LoadButton';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <SetPOI />
         {/* <LoadButtons /> */}
         <PicShow setSelectImg={setSelectImg} />
-        <PicModal selectImg={selectImg} />
+        { selectImg && <PicModal selectImg={selectImg} setSelectImg={setSelectImg} /> }
     </>
   );
 }
