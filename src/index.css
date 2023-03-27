@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./testComponents/Globe_20230323202156.gif);
 }
 
 code {
@@ -17,10 +18,12 @@ h1 {
   font-size: 40px;
   font-weight: 800;
   text-align: center;
+  color: white;
 }
 
 h5 {
   font-size: 25px;
   text-align: center;
   margin-top: 10px;
+  color: white;
 }
