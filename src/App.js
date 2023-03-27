@@ -1,5 +1,5 @@
 import React from 'react';
-import PicShow from './Components/PicShow';
+import PicShow from './Components/GameApps/PicShow';
 import SetPOI from './Components/Admin/SetPOI';
 
 function App() {
