@@ -1,7 +1,7 @@
 import React from 'react';
 import ImgStore from '../Firebase/ImgStore';
 
-function PicShow() {
+function PicShow({ setSelectImg }) {
 
   const { img } =  ImgStore('gl-images');
   console.log(img);
@@ -13,7 +13,8 @@ function PicShow() {
         <h4>Test Your Knowledge</h4>
         <div className='imgDisplay'>
           { img && img.map(img => (
-            <div className='imgGrid' key={img.id}>
+            <div className='imgGrid' key={img.id}
+              onClick={() => setSelectImg(img.url)}>
               <img id='imgFile' src={img.url} alt='uploaded images' />
             </div>
           ))}
