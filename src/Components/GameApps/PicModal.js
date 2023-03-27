@@ -5,7 +5,7 @@ function PicModal({ selectImg }) {
     return (
         <>
             <div className='modalFrame'>
-            <img id='modalImg' src={selectImg} alt='image display' />
+            <img id='modalImg' src={selectImg} alt='display selection' />
             </div>
         </>
     )

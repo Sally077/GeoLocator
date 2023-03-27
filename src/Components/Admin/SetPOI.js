@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
 import ProgressBar from '../Admin/ProgressBar';
+import { makeStyles } from '@material-ui/core/styles';
+import Fab from '@material-ui/core/Fab';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
+}));
+
 
 function SetPOI() {
 
@@ -20,10 +35,16 @@ function SetPOI() {
     }
   }
 
+  const classes = useStyles();
+
   return (
-    <form className='poiDiv'>
+    <form className={classes.root}>
         {/* <h1>GeoLocator</h1> */}
-        <input type="file" onChange={ uploadHandler }></input>
+        <Fab id='uploadBtn' variant="extended">
+        <CloudUploadIcon className={classes.extendedIcon} />
+        Upload
+        </Fab>
+        <input type="file" id='getFile' onChange={ uploadHandler }></input>
         <div className='fileSelect'>
           { error && <div className="fileErr">{ error }</div> }
           { file && <div className="fileOK">{ file.name }</div> }
