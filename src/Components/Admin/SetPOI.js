@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import ProgressBar from '../Admin/ProgressBar';
+import ProgressBar from '../Admin/ProgressBar';
 
 function SetPOI() {
 
@@ -27,7 +27,7 @@ function SetPOI() {
         <div className='fileSelect'>
           { error && <div className="fileErr">{ error }</div> }
           { file && <div className="fileOK">{ file.name }</div> }
-          {/* { file && <ProgressBar file={ file } setFile={ setFile }/> } */}
+          { file && <ProgressBar file={ file } setFile={ setFile }/> }
         </div>
     </form>
   );
