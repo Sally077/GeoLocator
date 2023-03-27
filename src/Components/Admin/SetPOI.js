@@ -22,7 +22,7 @@ function SetPOI() {
 
   return (
     <form className='poiDiv'>
-        <h1>GeoLocator</h1>
+        {/* <h1>GeoLocator</h1> */}
         <input type="file" onChange={ uploadHandler }></input>
         <div className='fileSelect'>
           { error && <div className="fileErr">{ error }</div> }

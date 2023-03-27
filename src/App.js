@@ -6,8 +6,8 @@ function App() {
   return (
     <>
         {/* <CssBaseline /> */}
-        <PicShow />
         <SetPOI />
+        <PicShow />
     </>
   );
 }

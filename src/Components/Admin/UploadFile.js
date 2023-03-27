@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { glDbase }  from '../Firebase/Config';
+import { glDbase, glStore, uploadTime }  from '../Firebase/Config';
 
 const UploadFile = (file) => {
     
@@ -9,6 +9,7 @@ const UploadFile = (file) => {
 
     useEffect(() => {
         const uploadRef = glDbase.ref(file.name);
+        const archiveRef = glStore.collection('gl-images');
         uploadRef.put(file).on('state_changed', (snap) => {
         let duration = (snap.bytesTransferred / snap.totalBytes) * 100;
         setProgress(duration);    
@@ -16,6 +17,8 @@ const UploadFile = (file) => {
             setError(err);
         }, async () => {
             const url = await uploadRef.getDownloadURL();
+            const uploaded = uploadTime();
+            archiveRef.add({ url, uploaded });
             setUrl(url);
         })
 

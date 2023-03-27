@@ -18,5 +18,6 @@ firebase.initializeApp(firebaseConfig);
  
 let glDbase = firebase.storage();
 let glStore = firebase.firestore();
+const uploadTime = firebase.firestore.FieldValue.serverTimestamp;
 
-export { glDbase, glStore };
+export { glDbase, glStore, uploadTime };
