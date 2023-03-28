@@ -6,7 +6,7 @@ import locations from  "../Admin/locations.json";
 import DraggableMarker from "./DraggableMarker";
 import './style.css';
 
-function Map({ id = 1 }) {
+function Map({ id = 1, onReturn }) {
   const [location, setLocation] = useState(null);
   const [markerPosition, setMarkerPosition] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -82,13 +82,18 @@ function Map({ id = 1 }) {
       <Polyline positions={polylinePoints}>
         <Tooltip direction="bottom" offset={[0, 20]} opacity={1} permanent>{tooltipContent || distance.toFixed(2).toString()+" km"}</Tooltip>
       </Polyline>);
-    setEnableGuess(false);
+    // setEnableGuess(false);
   };
 
-  const handleMarkerDrag = (newPosition) => {
+  const handleMarkerDrag = (e) => {
     // setMarkerPosition(e.target.getLatLng());
-      setMarkerPosition(newPosition);
+      console.log("in handleMarkerDrag: e: ",e);
+      setMarkerPosition(e);
       setEnableGuess(false);
+  };
+
+  const handleReturn = () => {
+    onReturn();
   };
 
   return (
@@ -103,7 +108,7 @@ function Map({ id = 1 }) {
           className="scores"
           style={{
             position: "absolute",
-            top: 10,
+            top: 16,
             left: 0,
             zIndex: 1, 
             height: "70px", 
@@ -122,10 +127,10 @@ function Map({ id = 1 }) {
           className="timeLeft"
           style={{
             position: "absolute",
-            top: 10,
+            top: 16,
             right: 10,
             zIndex: 1, 
-            height: "40px", 
+            height: "50px", 
             width: "70px", 
             backgroundColor: "grey"
             
@@ -150,24 +155,31 @@ function Map({ id = 1 }) {
           }}
           onMouseEnter={handleExpand}
           onMouseLeave={() => {
-            setTimeout(() => setIsExpanded(false), 2000);
+            setTimeout(() => setIsExpanded(false), 10000);
             setIsHovered(false);
           }}
         >
               <div style={{ position: "relative", height: "100%", width: "100%"}}>
           <MapContainer
-            whenCreated={map => mapRef.current = map}
+            whenCreated={map => mapRef.current = map} // the older version of leaflet requires this!!!
+            // ref={mapRef} // the newer version of leaflet requires this!!!
             key={id}
             center={[0, 0]}
             zoom={1}
             style={{ height: "100%", width: "100%", zIndex: 0}}
           >
             <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" //the original map
               attribution="© OpenStreetMap contributors"
-            />
+              // url='https://osmap.{s}.tile.mapcdn.net/en/map/v1/{z}/{x}/{y}.png'
+              // url='https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=0c1f0a61d42d46788d42a16b9c742b37'
+              // attribution="© OpenStreetMap contributors"
 
-            {markerPosition && (
+            //   url='https://maptiles.p.rapidapi.com/en/map/v1/{z}/{x}/{y}.png?rapidapi-key=d6635ac111msh992f1915364a87ep116fffjsne5b314922727'
+            //   attribution='Tiles &copy: <a href="https://www.maptilesapi.com/">MapTiles API</a>, Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+             />
+
+            {/* {markerPosition && (
               <Marker
                 draggable={true}
                 position={markerPosition}
@@ -177,10 +189,14 @@ function Map({ id = 1 }) {
               >
                 <Popup>Where in the World?</Popup>
               </Marker>
-            )}
+            )} */}
             {enableGuess && <DraggableMarker position={markerPosition} updatePosition={handleMarkerDrag} />}
             {distance && <Marker position={L.latLng(latitude, longitude)} />}
-            {markerPosition && <Marker position={L.latLng(markerPosition)} />}
+            {markerPosition && 
+              <Marker position={markerPosition}           
+                       draggable={true}
+                       onDragend={handleGuess} 
+              />}
             {polyline}
             {/* {console.log("L.midpoint: ",L.latLng(midPoint))} */}
             <Tooltip direction="bottom" offset={[0, 20]} opacity={1} permanent>
@@ -195,6 +211,24 @@ function Map({ id = 1 }) {
         </div>
         </ImageListItem>
       </ImageList>
+      <ImageList colls="1">
+        <ImageListItem
+          className="playButton"
+          style={{
+            position: "absolute",
+            bottom: 10,
+            right: "50%",
+            zIndex: 1, 
+            height: "50px", 
+            width: "70px", 
+            backgroundColor: "grey"
+          }}
+        >
+          <Button variant="contained" color="primary" style={{zIndex: 2}} onClick={handleReturn}>
+            Play Again
+          </Button>
+      </ImageListItem>
+    </ImageList>
     </div>
   );
 }

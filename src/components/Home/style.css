@@ -1,0 +1,69 @@
+.image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image img {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  
+  .halo {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+  }
+  
+
+
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+  }
+  
+  .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image {
+    transition: transform 0.2s;
+    transform-origin: center center;
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  
+  .selectedImage {
+    transition: transform 0.2s;
+    transform-origin: center center;
+    transform: scale(1.1);
+    filter: brightness(120%);
+  }
+  
+  .playButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .playButton {
+    font-size: 100px;
+  }
+
+  
+  
