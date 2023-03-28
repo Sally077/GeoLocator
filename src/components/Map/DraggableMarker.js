@@ -99,12 +99,11 @@
 
 
 
-import React, { useState } from "react";
+import React from "react";
 import { Marker, Popup, useMapEvents } from "react-leaflet";
 
 function DraggableMarker({position, updatePosition}) {
-  // const [position, setPosition] = useState({ lat: 0, lng: 0 });
-
+console.log("draggable position: ",position);
 
   const onDragEnd = (e) => {
     updatePosition(e.target.getLatLng());
@@ -117,20 +116,26 @@ function DraggableMarker({position, updatePosition}) {
     },
   });
 
-console.log("position: ", position);
+//console.log("position: ", position);
 
-  return position && position.lat && position.lng ? (
-    <Marker
-      position={position}
-      draggable={true}
-      onclick={mapEvents}
-      onDragend={onDragEnd}
-    >
-      <Popup>Hey, you can drag me! <br />
-        Latitude: {position.lat.toFixed(6)}, Longitude: {position.lng.toFixed(6)}
-      </Popup>
-    </Marker>
-  ) : null;
+  return (
+    <>
+
+      {position && (
+        <Marker
+          position={position}
+          draggable={true}
+
+          onDragend={onDragEnd}
+        >
+          {console.log("position: ", position)}
+          <Popup>Hey, you can drag me! <br />
+            Latitude: {position.lat.toFixed(6)}, Longitude: {position.lng.toFixed(6)}
+          </Popup>
+        </Marker>
+      )} 
+    </>
+  );
 }
 
 export default DraggableMarker;

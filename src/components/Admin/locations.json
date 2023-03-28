@@ -4,7 +4,7 @@
         "name": "Leif Eriksson Monument",
         "latitude": "64.14262902221166",
         "longitude": "-21.92749690174733",
-        "image": "https://www.alamy.com/europe-iceland-statue-of-leif-erikson-historic-explorer-front-of-the-futuristic-spire-and-concrete-columns-of-hallgrimskirkja-the-iconic-lutheran-church-in-reykjavik-image346835562.html",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Hallgr%C3%ADmskirkja.jpeg",
         "iframe": "<iframe src='https://www.google.com/maps/embed?pb=!4v1679566774515!6m8!1m7!1sEepN92C6sQK9wclC94hs3A!2m2!1d64.14260954902629!2d-21.92786600679261!3f135.06!4f5.730000000000004!5f0.7820865974627469' width='100%' height='600' frameBorder='0' allowFullScreen='' loading='lazy' referrerPolicy='no-referrer-when-downgrade'></iframe>",
         "POI": [
             "The Icelandic Phallological Museum (Hið Íslenzka Reðasafn)",
@@ -19,7 +19,7 @@
         "name": "Angel of the North",
         "latitude": "54.91427022113194",
         "longitude": "-1.5894619749812686",
-        "image": "https://www.alamy.com/angle-of-the-north-near-newcastle-upon-tyne-in-the-north-of-england-image243342907.html",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Angel_of_the_North_-_geograph.org.uk_-_332834.jpg",
         "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679578103900!6m8!1m7!1sCAoSLEFGMVFpcE9aYlVHLXdnR0VUVlhnRkJySFRhc2RhcGN0elR5T0FseXpiNXZX!2m2!1d54.91398981661959!2d-1.589383855462074!3f341.56!4f26.689999999999998!5f0.4000000000000002\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
         "POI": [
             "Ravensworth Arms",
@@ -33,7 +33,7 @@
         "name": "Machu Picchu",
         "latitude": "-13.226195015515124",
         "longitude": "-72.49735368932217",
-        "image": "../../assets/matchupicchu.jpg",
+        "image": "/assets/images/machupicchu.jpg",
         "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679603424529!6m8!1m7!1s-DZ8rHZ5d6CB1YbUNGppmA!2m2!1d-13.22949045931041!2d-72.50115899010625!3f67.06020507626127!4f-7.363031636609961!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
         "POI": [
             "Huayna Picchu",
@@ -48,7 +48,7 @@
         "name": "Petra",
         "latitude": "30.330084241444784",
         "longitude": "35.44951204168403",
-        "image": "../../assets/petra.jpg",
+        "image": "/assets/images/petra.jpg",
         "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679603585026!6m8!1m7!1sCAoSLEFGMVFpcFBsempQZFFtVXVqY3hLNE1zNzdJcEZ0YkRnb3lZeHRQSU5oQVQ5!2m2!1d30.33796764280633!2d35.43011967595925!3f82.67826046532099!4f8.392812270787786!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
         "POI": [
             "The Treasury",
@@ -63,7 +63,7 @@
         "name": "Sagrada Familia",
         "latitude": "  41.403782779094264",
         "longitude": "2.1743557978359345",
-        "image": "../../assets/sagradafamilia.jpg",
+        "image": "/assets/images/sagradafamilia.jpg",
         "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679603722713!6m8!1m7!1s0o8GUuPpQGwQDdEdKoz5PQ!2m2!1d41.40424167079257!2d2.174274123113673!3f175.4746273480419!4f22.99721265654422!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
         "POI": [
             "Park Guell",
@@ -78,7 +78,7 @@
         "name": "Great Wall of China",
         "latitude": "40.43201384437531",
         "longitude": "116.57040708431201",
-        "image": "../../assets/thechinesewall.jpg",
+        "image": "/assets/images/greatwallofchina.jpg",
         "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679604144521!6m8!1m7!1sCAoSLEFGMVFpcE9rWExTV2habzc3ZER6MXFNRkxFQmJZNUVQUC02ZnhjeWVOOHJY!2m2!1d40.44066957638386!2d116.5593964250799!3f278.2946548955645!4f-15.076486343600664!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
         "POI": [
             "Mutianyu Great Wall",
@@ -92,7 +92,7 @@
         "name": "Salar de Uyuni",
         "latitude": "-20.175031629723684",
         "longitude": "-67.56768215201201",
-        "image": "../../assets/salardeyuni.jpg",
+        "image": "/assets/images/salardeuyuni.jpg",
         "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679605924534!6m8!1m7!1sCAoSLEFGMVFpcE5HU2ktSnh4VGN3UXVJY2dmSHBSRXNMWDhKWmt6WXpaelAtY2dC!2m2!1d-20.185513269411!2d-67.82125620490508!3f27.123033071923658!4f7.912609975301919!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
         "POI": [
             "Train Cemetery",
@@ -106,7 +106,7 @@
         "name": "Stonehenge",
         "latitude": "   51.179036607667314",
         "longitude": "-1.8262042868168011",
-        "image": "../../assets/stonehenge.jpg",
+        "image": "/assets/images/stonehenge.jpg",
         "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679607124570!6m8!1m7!1sX8zKV7yRPiP9ePmmIVaRjg!2m2!1d51.17871656821466!2d-1.826308572770358!3f31.865838400276665!4f-2.2686214540349567!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
         "POI": [
             "Heelstone",
@@ -114,5 +114,177 @@
             "Aubrey Holes"
         ],
         "category": "Moderate"
+    },
+    {
+        "id": 9,
+        "name": "Baths of Antoninus",
+        "latitude": "36.85441456813004",
+        "longitude": "10.334924850659377",
+        "image": "/assets/images/AntonineBaths.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679685677167!6m8!1m7!1seJB0HP6ueLMNZRAyKoDn9g!2m2!1d36.85421426652986!2d10.33498561952914!3f170.14226757268432!4f-0.7142061988283501!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Marsaxlokk Fishing Village",
+            "Valletta Waterfront",
+            "Blue Grotto"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 10,
+        "name": "Ankor Wat",
+        "latitude": "13.413037937481793",
+        "longitude": "103.86684365616773",
+        "image": "/assets/images/ankorwat.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679686111705!6m8!1m7!1sCAoSLEFGMVFpcFB1ZHBuM0gxQVVDZXlPQUhSLVFRaUJtWFA4dDBwTXFDd1VrX2Nj!2m2!1d13.412537!2d103.861093!3f91.2969957006605!4f6.980766901850743!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Bayon Temple",
+            "Ta Prohm Temple",
+            "Angkor Thom"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 11,
+        "name": "The Great Buddha of Kamakura",
+        "latitude": "35.31673404401412",
+        "longitude": "139.53613341541086",
+        "image": "/assets/images/TheGreatBuddhaofKamakura.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679687205070!6m8!1m7!1sCAoSLEFGMVFpcE1FMS1Gb1h1dmktUktKaUg2Umx3c1ZQekN3STVOOXJZaFh4dTdu!2m2!1d35.3166995!2d139.5361536!3f40.82487860482053!4f11.611130503148715!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Hase-dera Temple",
+            "Tsurugaoka Hachimangu Shrine",
+            "Kencho-ji Temple"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 12,
+        "name": "St. Basil's Cathedral",
+        "latitude": "55.75262213394003",
+        "longitude": "37.623047121424385",
+        "image": "/assets/images/stbasilscathedral.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679687362529!6m8!1m7!1sCAoSLEFGMVFpcFByN2xxdW44VElrV2RZZWZoeWVRMUdDSEhJUElmbzBQMTJVNkhE!2m2!1d55.7522659!2d37.6233368!3f10.891967531154828!4f17.39491740726713!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+
+        "POI": [
+            "Lenin's Mausoleum",
+            "GUM Department Store",
+            "Red Square"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 13,
+        "name": "Christ the Redeemer",
+        "latitude": "-22.9517183956426",
+        "longitude": "-43.210455016152274",
+        "image": "/assets/images/ChristtheRedeemer.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679688662398!6m8!1m7!1sXwnkFKOTE-JkSBeiXiFYew!2m2!1d-22.95187473497711!2d-43.21018852318863!3f256.39403907059005!4f18.50060585533994!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+
+        "POI": [
+            "Parque Lage",
+            "Sugarloaf Mountain",
+            "Escadaria Selarón"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 14,
+        "name": "Batad Rice Terraces",
+        "latitude": "16.940095425906726",
+        "longitude": "121.13572222275629",
+        "image": "/assets/images/BatadRiceTerraces.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679689461280!6m8!1m7!1sCAoSLEFGMVFpcFBlOWhYdmVWaWp3aUN1MGotTUZJMzFOd1hZcmRGWUFiODA1OGw0!2m2!1d16.937468!2d121.1353789!3f28.56885984545718!4f-12.354960810858557!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Tappiya Falls",
+            "Bangaan Rice Terraces",
+            "Banaue Rice Terraces"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 15,
+        "name": "Church of St. George",
+        "latitude": " 12.032410588030404",
+        "longitude": "39.04124653068907",
+        "image": "/assets/images/churchofstgeorge.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679689824440!6m8!1m7!1sCAoSLEFGMVFpcE1keHNUb1hUNFV3SXd6cWdYUVlLelVWRVhUdTVMQjF0RW1sQTNp!2m2!1d12.0317676!2d39.0412719!3f221.37847349451425!4f2.990246502803487!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+   
+        "POI": [
+            "Al-Qahira Castle",
+            "Red Sea Mall",
+            "Corniche"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 16,
+        "name": "Ahu Tongariki",
+        "latitude": "-27.125594161261347",
+        "longitude": "-109.27697597635003",
+        "image": "/assets/images/AhuTongariki.jpg",
+        "iframe": " <iframe src=\"https://www.google.com/maps/embed?pb=!4v1679691696494!6m8!1m7!1sCAoSLEFGMVFpcE9JSzdac0lWVnduXzY2Skc5SmZDRVlwYmt5bUw0SjNRMVJHNlB2!2m2!1d-27.1257229!2d-109.2771606!3f107.56489057084892!4f-0.49106395973014116!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Rano Raraku",
+            "Anakena Beach",
+            "Orongo"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 17,
+        "name": "Jardin Majorelle-Yves Saint Laurent Mansion",
+        "latitude": "31.64124809802797",
+        "longitude": "-8.003243580428549",
+        "image": "/assets/images/YvesSaintLaurentMansion.jpg",
+        "iframe": " <iframe src=\"https://www.google.com/maps/embed?pb=!4v1679692399674!6m8!1m7!1sCAoSLEFGMVFpcE5NeWY3ZlYzQmVMTjEzSXRFaDBJMllkdWZGNndYOGJrVFlKTjVV!2m2!1d31.6417596!2d-8.0028788!3f107.53216119188758!4f-5.042397062551871!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Bahia Palace",
+            "Koutoubia Mosque",
+            "Saadian Tombs"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 18,
+        "name": "Mont Saint-Michel",
+        "latitude": "48.636272429342355",
+        "longitude": "-1.511532134877453",
+        "image": "/assets/images/MontSaintMichel.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679692674746!6m8!1m7!1sCAoSLEFGMVFpcE1PZDd4Vmt3UHN1S282SVFUQlJncVJJZDF1V0FlU21JTjc3czR0!2m2!1d48.631535!2d-1.5115067!3f8.774159132967611!4f4.276529999999994!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "Abbaye du Mont-Saint-Michel",
+            "Musee de la Mer",
+            "Ramparts Walk"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 19,
+        "name": "Wieliczka Salt Mine",
+        "latitude": "49.983483167422165",
+        "longitude": "20.053795906746743",
+        "image": "/assets/images/WieliczkaSaltMine.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679693334552!6m8!1m7!1sCAoSLEFGMVFpcE1LVUdwSWVDSzZEai1PODREaUYzS3Y5ZXh0YUFaZkZWcmtET2dm!2m2!1d49.983498!2d20.0538368!3f267.6366443840048!4f8.049959347845714!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "St. Kinga's Chapel",
+            "Miners' Route",
+            "Underground Lake"
+        ],
+        "category": "Moderate"
+    },
+    {
+        "id": 20,
+        "name": "Park and National Palace of Pena",
+        "latitude": "38.79038786102295",
+        "longitude": "-9.391030645512592",
+        "image": "/assets/images/ParkandNationalPalaceofPena.jpg",
+        "iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1679694045162!6m8!1m7!1sCAoSLEFGMVFpcE5nZEtUUHhjWXdxOGRab1UxNi1oZUJQNUxiX1ItVzNkUmhSRW1B!2m2!1d38.787578!2d-9.390344000000027!3f331.87502500964064!4f11.525497487927836!5f0.7820865974627469\" width=\"100%\" height=\"600\" frameBorder=\"0\" allowFullScreen=\"\" loading=\"lazy\" referrerPolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "POI": [
+            "The Park of Pena",
+            "The High Cross",
+            "The chalet of the countess of edla"
+        ],
+        "category": "Moderate"
     }
+
 ]
