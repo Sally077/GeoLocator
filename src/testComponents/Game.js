@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Button, Grid } from '@material-ui/core';
+import { Button, Grid } from "@mui/material";
+
 
 function Game() {
   const [score, setScore] = useState(0);
@@ -57,7 +58,7 @@ function Game() {
         <Grid container item xs={10} spacing={2}>
           <Grid item xs={5}>
             <Button
-              variant="contained"
+             
               color="primary"
               onClick={() => handleAnswer(country.capital)}
               fullWidth>
@@ -80,3 +81,5 @@ function Game() {
 }
 
 export default Game;
+
+
