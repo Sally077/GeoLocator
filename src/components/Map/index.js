@@ -128,8 +128,8 @@ function Map({ id = 1, onReturn }) {
             bottom: 10,
             right: 10,
             zIndex: 1,
-            height: isExpanded ? "400px" : "150px",
-            width: isExpanded ? "600px" : "300px",
+            height: isExpanded ? "250px" : "150px",
+            width: isExpanded ? "400px" : "300px",
           }}
           onMouseEnter={handleExpand}
           onMouseLeave={handleCollapse}
