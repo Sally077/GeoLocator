@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, Marker, Popup, TileLayer, Polyline, Tooltip } from "react-leaflet";
 import L from 'leaflet';
-import { Button, ImageList, ImageListItem } from "@material-ui/core";
+import { ImageList, ImageListItem } from "@material-ui/core";
 import locations from  "../Admin/locations.json";
 import DraggableMarker from "./DraggableMarker";
 import './style.css';
 import HomeBtn from "../utils/HomeBtn";
+import GuessBtn from "../utils/GuessBtn";
 import RestartBtn from "../utils/RestartBtn";
 import Home from "../Home";
 
@@ -179,7 +180,7 @@ function Map({ id = 1, onReturn }) {
           </MapContainer>
           {markerPosition && (
             <div style={{ position: "absolute", zIndex: 2, bottom: 10, left: 10}}>
-                <Button variant="contained" disabled={!enableGuess} color="primary" onClick={handleGuess}>Guess</Button>
+                <GuessBtn variant="contained" disabled={!enableGuess} color="primary" onClick={handleGuess}>Guess</GuessBtn>
             </div>
           )}
         </div>
