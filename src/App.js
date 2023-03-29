@@ -1,20 +1,31 @@
-import React from 'react';
-import { CssBaseline, Button } from "@material-ui/core";
-import Map from './components/Map';
+import React, { useState } from 'react';
+import GLGrid from './components/GLGrid';
+// import { Button } from "@material-ui/core";
+// import Map from './components/Map';
 import Home from './components/Home';
-import TestImages from './components/Map/testImages';
+import Header from './components/Home/Header';
+import StartBtn from './components/utils/StartBtn';
+// import TestImages from './components/Map/testImages';
 //import Timer from "./testComponents/Timer";
 
+
 function App() {
+
+
+  // const handlePageChange = (page) => {
+  //   setCurrentPage(page);
+  // };
+
   return (
     <>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         {/* where we want to call our components */}
         {/* <Map id={8} /> */}
         {/* <Timer />
         <Button   >Start</Button> */}
-
-        <Home />
+        {/* <Header /> */}
+        {/* <Home /> */}
+        <GLGrid />
         {/* <TestImages /> */}
     </>
   );
