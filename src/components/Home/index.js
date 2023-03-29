@@ -1,107 +1,25 @@
-// import React, { useState } from "react";
-// import { Grid, Button } from "@material-ui/core";
-// import { motion } from "framer-motion";
-// import locations from "../Admin/locations.json";
-// import ImageGrid from "./ImageGrid";
-// import Map from "../Map";
+import React from 'react';
+import '../Home/home.css'
+import StartBtn from '../utils/StartBtn';
 
-// function App() {
-//   const [playedImages, setPlayedImages] = useState([]);
-
-//   const [selectedImageId, setSelectedImageId] = useState(null);
-
-//   const handlePlayButtonClick = () => {
-//     // Select a random image that hasn't been played yet
-//     const unplayedImages = locations.filter(
-//       (location) => !playedImages.includes(location.id)
-//     );
-//     const randomIndex = Math.floor(Math.random() * unplayedImages.length);
-//     const selectedImage = unplayedImages[randomIndex];
-
-//     // Start the timer to simulate hover effect
-//     setTimeout(() => {
-//       setSelectedImageId(selectedImage.id);
-//     }, 200);
-//   };
-
-//   const handleMapReturn = (id) => {
-//     setPlayedImages([...playedImages, id]);
-
-//     // Start the timer to simulate hover effect
-//     setTimeout(() => {
-//       setSelectedImageId(null);
-//     }, 200);
-//   };
-
-//   return (
-//     <>
-//       {selectedImageId ? (
-//         <Map id={selectedImageId} onReturn={handleMapReturn} />
-//       ) : (
-//         <>
-//           <Button variant="contained" color="primary" onClick={handlePlayButtonClick}>
-//             Play
-//           </Button>
-//           <ImageGrid locations={locations} playedImages={playedImages} />
-//         </>
-//       )}
-//     </>
-//   );
-// }
-
-// export default App;
+function Home() {
 
 
-
-import React, { useState } from "react";
-import { Button } from "@material-ui/core";
-// import { motion } from "framer-motion";
-import locations from "../Admin/locations.json";
-import ImageGrid from "../Map/testImages";
-import Map from "../Map";
-
-function App() {
-  const [playedImages, setPlayedImages] = useState([]);
-
-  const [selectedImageId, setSelectedImageId] = useState(null);
-
-  const handlePlayButtonClick = () => {
-    // Select a random image that hasn't been played yet
-    const unplayedImages = locations.filter(
-      (location) => !playedImages.includes(location.id)
-    );
-    const randomIndex = Math.floor(Math.random() * unplayedImages.length);
-    const selectedImage = unplayedImages[randomIndex];
-
-    // Start the timer to simulate hover effect
-    // setTimeout(() => {
-      setSelectedImageId(selectedImage.id);
-    // }, 200);
-  };
-
-  const handleMapReturn = (id) => {
-    setPlayedImages([...playedImages, id]);
-
-    // Start the timer to simulate hover effect
-    // setTimeout(() => {
-      setSelectedImageId(null);
-    // }, 200);
-  };
 
   return (
-    <>
-      {selectedImageId ? (
-        <Map id={selectedImageId} onReturn={handleMapReturn} />
-      ) : (
-        <>
-          <Button variant="contained" z-index="10" backgroundcolor="white" color="primary" onClick={handlePlayButtonClick}>
-            Play
-          </Button>
-          <ImageGrid onImageSelect={handleMapReturn} playedImages={playedImages} />
-        </>
-      )}
-    </>
+
+    <div className='homeDiv'>
+        {/* <h1>Geolocator</h1> */}
+        <h4>"Your World, Your Location!"</h4>
+        <h5>Test Your Knowledge</h5>
+        <p>Welcome to the latest exciting game in town. Let's see how easily you can find the location of the POI selected by the computer on the map before you. Put a marker anywhere on the world map where you think the place is. Your marker needs to be no further than 1km away from the exact location. Take advantage of the google street view to give yourself some clues, but remember you only have 5 seconds after you click the 'Play' button. Press start when you are ready.</p>
+
+        <StartBtn ></StartBtn>
+
+    </div>
+    
   );
 }
 
-export default App;
+
+export default Home;
