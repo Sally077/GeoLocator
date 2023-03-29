@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { motion } from 'framer-motion';
-import { ImageListItem, ImageList } from '@material-ui/core';
+// import { ImageListItem } from '@material-ui/core';
 import locations from '../Admin/locations.json';
 import './style.css';
 
@@ -84,7 +84,7 @@ const ImageGrid = ({ onImageSelect, playedImages}) => {
 
 return (
   <>
-    <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+    <div className='imgDisplay'>
       {/* <ImageListItem xs={12}>
         <motion.div
           className="play-button-container"
@@ -96,23 +96,26 @@ return (
       </ImageListItem> */}
 
       {locations.map((image) => (
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          animate={hoveredImage && hoveredImage.id === image.id ? { scale: 1.2 } : {}}
-          key={image.id}
+        <motion.div className='imgGrid' key={image.id}
+          whileHover={{ opacity: 1, scale: 1.05,
+          boxShadow: "4px 4px 0 rgba(0, 0, 0, 0.5)" }}
+          whileTap={{ opacity: 0.2 }}
+          animate={hoveredImage && hoveredImage.id === image.id ? { scale: 1.05 } : {}}
+          layout 
+          
         >
-          <ImageListItem xs={12} sm={6} md={4} lg={3}>
-            <img
+          {/* <ImageListItem> */}
+            <img id='imgFile'
               src={`${image.image}?w=164&h=164&fit=crop&auto=format`}
               srcSet={`${image.image}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
               alt={image.name}
               loading="lazy"
               onClick={() => handleImageClick(image.id)}
             />
-          </ImageListItem>
+          {/* </ImageListItem> */}
         </motion.div>
       ))}
-    </ImageList>
+    </div>
     {/* {buttonClicked ? console.log("button click: ",buttonClicked,"id: ", hoveredImage.id ) : null}
     {}
     {buttonClicked && (

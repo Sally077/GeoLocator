@@ -5,6 +5,9 @@ import { Button, ImageList, ImageListItem } from "@material-ui/core";
 import locations from  "../Admin/locations.json";
 import DraggableMarker from "./DraggableMarker";
 import './style.css';
+import HomeBtn from "../utils/HomeBtn";
+import RestartBtn from "../utils/RestartBtn";
+import Home from "../Home";
 
 function Map({ id = 1, onReturn }) {
   const [location, setLocation] = useState(null);
@@ -96,6 +99,10 @@ function Map({ id = 1, onReturn }) {
     onReturn();
   };
 
+  const handleHomeBtn = () => {
+    return <Home />;
+  };
+
   return (
     <div>
       <ImageList cols={1}>
@@ -159,7 +166,7 @@ function Map({ id = 1, onReturn }) {
             setIsHovered(false);
           }}
         >
-              <div style={{ position: "relative", height: "100%", width: "100%"}}>
+              <div id="mapWiew" style={{ position: "absolute", height: "100%", width: "100%"}}>
           <MapContainer
             whenCreated={map => mapRef.current = map} // the older version of leaflet requires this!!!
             // ref={mapRef} // the newer version of leaflet requires this!!!
@@ -212,7 +219,7 @@ function Map({ id = 1, onReturn }) {
         </ImageListItem>
       </ImageList>
       <ImageList colls="1">
-        <ImageListItem
+        {/* <ImageListItem
           className="playButton"
           style={{
             position: "absolute",
@@ -223,11 +230,16 @@ function Map({ id = 1, onReturn }) {
             width: "70px", 
             backgroundColor: "grey"
           }}
-        >
-          <Button variant="contained" color="primary" style={{zIndex: 2}} onClick={handleReturn}>
+        > */}
+        <div id="mapButtons">
+          <HomeBtn onClick={handleHomeBtn}></HomeBtn>
+          <RestartBtn onClick={handleReturn}></RestartBtn>
+        </div>
+          
+          {/* <Button variant="contained" color="primary" style={{zIndex: 2}} onClick={handleReturn}>
             Play Again
-          </Button>
-      </ImageListItem>
+          </Button> */}
+      {/* </ImageListItem> */}
     </ImageList>
     </div>
   );
