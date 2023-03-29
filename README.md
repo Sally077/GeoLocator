@@ -40,5 +40,5 @@ Steep learning curves across the board! So everyone chipped in and helped each o
 
 - Adding more locations, add sections with different level of difficulty(easy, moderate, difficult)</br>
 - Adding the method score</br>
-- Creating quiz game that with flags</br>
+- Creating quiz game with flags, capitals</br>
 - Creating multiplayer option</br>
