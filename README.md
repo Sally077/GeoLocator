@@ -24,15 +24,15 @@ As a player, I want to play several times in a row.</br>
 
 ## Groupbreakdown
 
-Github: Sally
-React/Node: Sally
-Framemotion: Rod
-Material-UI: Rod
-Leaflet/Google Map: Ranjit
-User Story, Presentation, Readme file: Sandra
-API’s & JS: Ranjit
-Polished UI, CSS: Rod
-JSON files: Sandra
+Github: Sally</br>
+React/Node: Sally</br>
+Framemotion: Rod</br>
+Material-UI: Rod</br>
+Leaflet/Google Map: Ranjit</br>
+User Story, Presentation, Readme file: Sandra</br>
+API’s & JS: Ranjit</br>
+Polished UI, CSS: Rod</br>
+JSON files: Sandra</br>
 
 Steep learning curves across the board! So everyone chipped in and helped each other!
 
