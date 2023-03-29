@@ -1,46 +1,75 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Grid, Paper,  Button } from "@mui/material";
-import { render } from "react-dom";
+import React, { useState, useEffect } from "react";
+import { Button, Grid, Card } from "@material-ui/core";
 
-console.log("Test")
+export default function Timer({ position, counter, setCounter }) {
+  const btnstyle = { margin: "10px 0", color: "custom color", align: "center" };
+  const cardStyle = { padding: 20, height: 100, width: 220, margin: 20 };
+  const cardStyle2 = { padding: 20, height: 100, width: 220 };
 
+  const [isActive, setIsActive] = useState(false);
 
-{/*const that returns countDownTimer*/}
-function Timer()  {
-    const btnstyle = {margin: "8px 0", color: "custom color"}
-    const  paperStyle = {padding : 20, height : '20vh', width: 120, margin: "left"}
-    const [counter, setCounter] = React.useState(120);
-   
+//   console.log(position);
+  useEffect(() => {
+    if (counter > 0 && isActive) {
+      setTimeout(() => setCounter(counter - 1), 1000);
+    }
+  });
 
-    React.useEffect(() => {
-        counter > 0 && setTimeout(() => setCounter(counter - 1),1000);
-    },[counter]);
+  return (
+    <Grid container spacing={2}>
+      {/* Timer Card */}
+      <Grid item xs={6}>
+        <Card
+          style={{
+            position: "absolute",
+            top: 10,
+            left: 0,
+            zIndex: 1,
+            height: "160px",
+            width: "170px",
+            backgroundColor: "grey",
+            fontWeight: "800",
+            textAlign: "center"
+          }}
+        >
+          <h1>Score</h1>
+          <div className="Score">
+            <p>{}</p>
+          </div>
+          {/* <div>Score: {counter}</div> */}
+        </Card>
+      </Grid>
+      <Grid item xs={6}>
+        <Card
+          elevation={10}
+          style={{
+            position: "absolute",
+            top: 10,
+            right: 10,
+            zIndex: 1,
+            height: "160px",
+            width: "170px",
+            backgroundColor: "grey",
+            fontWeight: "800",
+            textAlign: "center",
+          }}
+        >
+          <h1>Timer</h1>
+          <div className="Timer"></div>
+          <div>Countdown: {counter}</div>
+          <Button
+            type="Start"
+            style={btnstyle}
+            variant="contained"
+            color="success"
+            onClick={() => setIsActive(true)}
+          >
+            Start
+          </Button>
+        </Card>
+      </Grid>
 
-    
-
-    return (
-        <>
-        
-            <Grid>
-            <Paper elevation={10} style={paperStyle}>
-                <Grid align="left">
-                <h1>Timer</h1>
-                <div className="Timer"></div>
-        <div>Countdown: {counter}</div>
-            <Button type="Start" color="custom color" variant="contained" style={btnstyle}>Start</Button>
-            </Grid>
-            </Paper>
-            </Grid>
-
-            </>
-
-            
-    );
+      {/* Score Card */}
+    </Grid>
+  );
 }
-
-
-const rootElement = document.getElementById("root");
-render(<Timer />, rootElement);
-
-export default Timer;
