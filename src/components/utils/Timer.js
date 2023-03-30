@@ -28,12 +28,12 @@ export default function Timer({ counter, setCounter }) {
             width: "170px",
             backgroundColor: "grey",
             fontWeight: "800",
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
-          <h1>Score</h1>
+          <h2>Score</h2>
           <div className="Score">
-            <p>{}</p>
+            <h2 className="timeScore">{0}</h2>
           </div>
           {/* <div>Score: {counter}</div> */}
         </Card>
@@ -53,9 +53,11 @@ export default function Timer({ counter, setCounter }) {
             textAlign: "center",
           }}
         >
-          <h1>Timer</h1>
+          <h2>Timer</h2>
           <div className="Timer"></div>
-          <div>Countdown: {counter}</div>
+          <div>
+            <h2 className="timeScore">{counter}</h2>
+          </div>
         </Card>
       </Grid>
 
