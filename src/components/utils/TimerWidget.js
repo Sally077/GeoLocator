@@ -43,25 +43,9 @@ const TimerWidget = ({ duration, onStop, onReset }) => {
     .padStart(2, "0");
   const seconds = (timeLeft % 60).toString().padStart(2, "0");
 
-//   const circleVariants = {
-//     initial: {
-//       strokeDashoffset: circumference,
-//       transition: { duration: 0 },
-//     },
-//     running: {
-//       strokeDashoffset: 0,
-//       transition: { duration: time },
-//     },
-//     paused: {
-//       strokeDashoffset: progress.current,
-//       transition: { duration: 0 },
-//     },
-//   };
-
-
   return (
     <div style={{ display: "flex", alignItems: "center" }}>
-{console.log(duration)}
+      {console.log(duration)}
       <motion.div
         style={{
           width: 64,
@@ -89,11 +73,7 @@ const TimerWidget = ({ duration, onStop, onReset }) => {
         >
           {isRunning ? "Stop" : "Start"}
         </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={handleReset}
-        >
+        <Button variant="contained" color="secondary" onClick={handleReset}>
           Reset
         </Button>
       </div>

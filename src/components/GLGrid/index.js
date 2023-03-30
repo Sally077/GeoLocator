@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-// import { Button } from "@material-ui/core";
-// import { motion } from "framer-motion";
 import locations from "../Admin/locations.json";
-import ImageGrid from "../Map/testImages";
+import ImageGrid from "../Map/GLImages";
 import Map from "../Map";
 import PlayBtn from "../utils/PlayBtn";
 import Header from "../Home/Header";
-import Timer from '../utils/Timer';
+import Timer from "../utils/Timer";
+import { Link } from "react-router-dom";
+import HomeBtn from "../utils/HomeBtn";
 
 function GLGrid() {
   const [playedImages, setPlayedImages] = useState([]);
@@ -23,7 +23,7 @@ function GLGrid() {
 
     // Start the timer to simulate hover effect
     // setTimeout(() => {
-      setSelectedImageId(selectedImage.id);
+    setSelectedImageId(selectedImage.id);
     // }, 200);
   };
 
@@ -32,25 +32,31 @@ function GLGrid() {
 
     // Start the timer to simulate hover effect
     // setTimeout(() => {
-      setSelectedImageId(null);
+    setSelectedImageId(null);
     // }, 200);
   };
 
   return (
     <>
       <Header />
-      {selectedImageId ? ( 
+      {selectedImageId ? (
         <>
-        <Timer counter={counter} setCounter={setCounter}/>
-        <Map id={selectedImageId} onReturn={handleMapReturn} />
+          <Timer counter={counter} setCounter={setCounter} />
+          <Map id={selectedImageId} onReturn={handleMapReturn} />
         </>
       ) : (
         <>
-          <PlayBtn onClick={handlePlayButtonClick}></PlayBtn>
-          {/* <Button variant="contained" z-index="10" backgroundcolor="white" color="primary" onClick={handlePlayButtonClick}>
-            Play
-          </Button> */}
-          <ImageGrid onImageSelect={handleMapReturn} playedImages={playedImages} />
+          <div id="gridBtns">
+            <PlayBtn onClick={handlePlayButtonClick}></PlayBtn>
+            <Link to="/">
+              <HomeBtn></HomeBtn>
+            </Link>
+          </div>
+
+          <ImageGrid
+            onImageSelect={handleMapReturn}
+            playedImages={playedImages}
+          />
         </>
       )}
     </>

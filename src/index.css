@@ -1,13 +1,8 @@
 body {
-  margin: 3% 15%;
+  margin: 2% 15%;
   box-sizing: border-box;
   background-image: url(./components/Images/Looping-location-pin-symbols.gif);
   background-size: cover;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
@@ -15,17 +10,11 @@ code {
     monospace;
 }
 
-/* h1 {
-  font-size: 40px;
-  font-weight: 800;
-  text-align: center;
+#gridBtns {
+  display: flex;
+  margin-top: -80px;
+  justify-content: space-between;
 }
-
-h5 {
-  font-size: 25px;
-  text-align: center;
-  margin-top: 10px;
-} */
 
 .imgDisplay {
   display: grid;
@@ -62,7 +51,65 @@ h5 {
   flex-basis: 0;
   z-index: 1;
   position: absolute;
-  margin-top: -250px;
+  margin-top: -300px;
+  margin-left: -10px;
   padding: 0 !important;
   justify-items: flex-start;
+}
+
+.MuiCard-root {
+  border: 1px solid rgb(207, 205, 205);
+  background-color: rgba(240, 248, 255, 0) !important;
+  margin: 100px 30px;
+  padding-top: 5px;
+  font-size: 20px;
+  color: white !important;
+}
+
+.timeScore {
+  font-size: 40px;
+  line-height: 0.2;
+}
+
+@media screen and (max-width: 1140px) {
+  .imgDisplay {
+    display: grid;
+    grid-gap: 20px;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  #gridBtns {
+    display: block;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .MuiCard-root {
+    margin: 200px 30px;
+    padding: 0px;
+    font-size: 16px;
+    height: 130px !important;
+    width: 130px !important;
+    color: yellow !important;
+  }
+
+  .timeScore {
+    font-size: 35px;
+    line-height: 0.3;
+    color: yellow;
+  }
+
+  #mapButtons {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    margin-top: -100px;
+    margin-left: -10px;
+    padding: 0 !important;
+  }
+
 }
