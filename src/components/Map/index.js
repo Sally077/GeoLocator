@@ -1,17 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, Marker, Popup, TileLayer, Polyline, Tooltip } from "react-leaflet";
 import L from 'leaflet';
-import { Button, ImageList, ImageListItem } from "@material-ui/core";
+import { ImageList, ImageListItem } from "@material-ui/core";
 import locations from  "../Admin/locations.json";
 import DraggableMarker from "./DraggableMarker";
 import './style.css';
 import HomeBtn from "../utils/HomeBtn";
+import GuessBtn from "../utils/GuessBtn";
 import RestartBtn from "../utils/RestartBtn";
 import Home from "../Home";
 
 function Map({ id = 1, onReturn }) {
   const [location, setLocation] = useState(null);
-  const [markerPosition, setMarkerPosition] = useState(null);
+  const [markerPosition, setMarkerPosition] = useState({ lat: 0, lng: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [distance, setDistance] = useState(null);
@@ -19,6 +20,7 @@ function Map({ id = 1, onReturn }) {
   const [polyline, setPolyline] = useState(null);
   const [tooltipContent, setTooltipContent] = useState(null);
   const [enableGuess, setEnableGuess] = useState(true);
+  const [timerId, setTimerId] = useState(null);
   // const [markerNumber, setMarkerNumber] = useState(0); // not using markerNumber currently!!!
   //const [midPoint, setMidPoint] = useState({ lat: 0, lng: 0 });// not using markerNumber currently!!!
 
@@ -48,10 +50,19 @@ function Map({ id = 1, onReturn }) {
 
   const handleExpand = () => {
     setIsExpanded(true);
+    clearTimeout(timerId);
     if (mapRef.current) {
       mapRef.current.invalidateSize();
     }
   };
+
+  const handleCollapse = () =>{
+    const id = setTimeout(() => {
+      setIsExpanded(false);
+    }, 5000);
+    setIsHovered(false);
+    setTimerId(id);
+  }
 
   // const { name, latitude, longitude, image, iframe } = location;  // not using name and image currently!!!
   const { latitude, longitude, iframe } = location;
@@ -85,14 +96,12 @@ function Map({ id = 1, onReturn }) {
       <Polyline positions={polylinePoints}>
         <Tooltip direction="bottom" offset={[0, 20]} opacity={1} permanent>{tooltipContent || distance.toFixed(2).toString()+" km"}</Tooltip>
       </Polyline>);
-    // setEnableGuess(false);
+    setEnableGuess(false);
   };
 
-  const handleMarkerDrag = (e) => {
-    // setMarkerPosition(e.target.getLatLng());
-      console.log("in handleMarkerDrag: e: ",e);
-      setMarkerPosition(e);
-      setEnableGuess(false);
+  const handleMarkerDragEnd = (newPosition) => {
+     // console.log("in Map - handleMarkerDrag: new pos: ",newPosition);
+      setMarkerPosition(newPosition);
   };
 
   const handleReturn = () => {
@@ -112,44 +121,6 @@ function Map({ id = 1, onReturn }) {
       </ImageList>
       <ImageList cols={1}>
         <ImageListItem
-          className="scores"
-          style={{
-            position: "absolute",
-            top: 16,
-            left: 0,
-            zIndex: 1, 
-            height: "70px", 
-            width: "160px", 
-            backgroundColor: "grey"
-            
-          }}
-          >
-          <div>
-            Scores
-          </div>
-        </ImageListItem>
-      </ImageList>
-      <ImageList cols={1}>
-        <ImageListItem
-          className="timeLeft"
-          style={{
-            position: "absolute",
-            top: 16,
-            right: 10,
-            zIndex: 1, 
-            height: "50px", 
-            width: "70px", 
-            backgroundColor: "grey"
-            
-          }}
-          >
-          <div>
-            Time left:
-          </div>
-        </ImageListItem>
-      </ImageList>
-      <ImageList cols={1}>
-        <ImageListItem
           className="map"
           style={{
             position: "absolute",
@@ -157,16 +128,13 @@ function Map({ id = 1, onReturn }) {
             bottom: 10,
             right: 10,
             zIndex: 1,
-            height: isExpanded ? "300px" : "150px",
-            width: isExpanded ? "500px" : "300px",
+            height: isExpanded ? "250px" : "150px",
+            width: isExpanded ? "400px" : "300px",
           }}
           onMouseEnter={handleExpand}
-          onMouseLeave={() => {
-            setTimeout(() => setIsExpanded(false), 10000);
-            setIsHovered(false);
-          }}
+          onMouseLeave={handleCollapse}
         >
-              <div id="mapWiew" style={{ position: "absolute", height: "100%", width: "100%"}}>
+              <div style={{ position: "absolute", height: "100%", width: "100%"}}>
           <MapContainer
             whenCreated={map => mapRef.current = map} // the older version of leaflet requires this!!!
             // ref={mapRef} // the newer version of leaflet requires this!!!
@@ -197,13 +165,13 @@ function Map({ id = 1, onReturn }) {
                 <Popup>Where in the World?</Popup>
               </Marker>
             )} */}
-            {enableGuess && <DraggableMarker position={markerPosition} updatePosition={handleMarkerDrag} />}
+            <DraggableMarker position={markerPosition} onMarkerDragEnd={handleMarkerDragEnd} />
             {distance && <Marker position={L.latLng(latitude, longitude)} />}
-            {markerPosition && 
+            {/* {markerPosition && 
               <Marker position={markerPosition}           
                        draggable={true}
                        onDragend={handleGuess} 
-              />}
+              />} */}
             {polyline}
             {/* {console.log("L.midpoint: ",L.latLng(midPoint))} */}
             <Tooltip direction="bottom" offset={[0, 20]} opacity={1} permanent>
@@ -212,7 +180,7 @@ function Map({ id = 1, onReturn }) {
           </MapContainer>
           {markerPosition && (
             <div style={{ position: "absolute", zIndex: 2, bottom: 10, left: 10}}>
-                <Button variant="contained" disabled={enableGuess} color="primary" onClick={handleGuess}>Guess</Button>
+                <GuessBtn variant="contained" disabled={!enableGuess} color="primary" onClick={handleGuess}>Guess</GuessBtn>
             </div>
           )}
         </div>
