@@ -1,91 +1,94 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import ButtonBase from '@material-ui/core/ButtonBase';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import ButtonBase from "@material-ui/core/ButtonBase";
+import Typography from "@material-ui/core/Typography";
 
 const images = [
   {
-    url: '/static/images/image-list/camera.jpg',
-    title: 'Play',
-    width: '10%',
+    url: "/static/images/image-list/camera.jpg",
+    title: "Play",
+    width: "12%",
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: "flex",
+    flexWrap: "wrap",
     minWidth: 300,
-    width: '100%',
+    width: "100%",
+    marginBottom: 10,
   },
   image: {
-    position: 'relative',
-    height: 80,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    justifyContent: 'center',
-    [theme.breakpoints.down('xs')]: {
-      width: '100% !important', // Overrides inline-style
+    position: "relative",
+    height: 76,
+    marginLeft: 10,
+    marginRight: "auto",
+    justifyContent: "center",
+    [theme.breakpoints.down("xs")]: {
+      width: "100% !important", // Overrides inline-style
       height: 100,
     },
-    '&:hover, &$focusVisible': {
+    "&:hover, &$focusVisible": {
       zIndex: 1,
-      '& $imageBackdrop': {
+      "& $imageBackdrop": {
         opacity: 0,
       },
-      '& $imageMarked': {
+      "& $imageMarked": {
         opacity: 0,
       },
-      '& $imageTitle': {
-        border: '4px solid currentColor',
+      "& $imageTitle": {
+        border: "4px solid currentColor",
       },
     },
   },
   focusVisible: {},
   imageButton: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     color: theme.palette.common.white,
   },
   imageSrc: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center 40%',
+    backgroundSize: "cover",
+    backgroundPosition: "center 40%",
   },
   imageBackdrop: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
     backgroundColor: theme.palette.common.black,
     opacity: 0,
-    transition: theme.transitions.create('opacity'),
+    transition: theme.transitions.create("opacity"),
   },
   imageTitle: {
-    position: 'relative',
+    position: "relative",
     fontSize: 25,
     fontWeight: 600,
-    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
+    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
+      theme.spacing(1) + 6
+    }px`,
   },
   imageMarked: {
     height: 3,
     width: 20,
     backgroundColor: theme.palette.common.white,
-    position: 'absolute',
+    position: "absolute",
     bottom: -2,
-    left: 'calc(50% - 9px)',
-    transition: theme.transitions.create('opacity'),
+    left: "calc(50% - 9px)",
+    transition: theme.transitions.create("opacity"),
   },
 }));
 
@@ -103,8 +106,7 @@ export default function PlayBtn({ onClick }) {
           style={{
             width: image.width,
           }}
-
-          onClick={onClick} 
+          onClick={onClick}
         >
           <span
             className={classes.imageSrc}
@@ -124,7 +126,6 @@ export default function PlayBtn({ onClick }) {
               <span className={classes.imageMarked} />
             </Typography>
           </span>
-
         </ButtonBase>
       ))}
     </div>

@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Button, Grid, Card } from "@material-ui/core";
+import React, { useEffect } from "react";
+import { Grid, Card } from "@material-ui/core";
 
-export default function Timer({ position, counter, setCounter }) {
+export default function Timer({ counter, setCounter }) {
   const btnstyle = { margin: "10px 0", color: "custom color", align: "center" };
   const cardStyle = { padding: 20, height: 100, width: 220, margin: 20 };
   const cardStyle2 = { padding: 20, height: 100, width: 220 };
 
-  const [isActive, setIsActive] = useState(false);
+  const isActive = true; // bring in conditionals if we need to control the timer starting!!!
 
-//   console.log(position);
   useEffect(() => {
     if (counter > 0 && isActive) {
       setTimeout(() => setCounter(counter - 1), 1000);
@@ -29,12 +28,12 @@ export default function Timer({ position, counter, setCounter }) {
             width: "170px",
             backgroundColor: "grey",
             fontWeight: "800",
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
-          <h1>Score</h1>
+          <h2>Score</h2>
           <div className="Score">
-            <p>{}</p>
+            <h2 className="timeScore">{0}</h2>
           </div>
           {/* <div>Score: {counter}</div> */}
         </Card>
@@ -54,18 +53,11 @@ export default function Timer({ position, counter, setCounter }) {
             textAlign: "center",
           }}
         >
-          <h1>Timer</h1>
+          <h2>Timer</h2>
           <div className="Timer"></div>
-          <div>Countdown: {counter}</div>
-          <Button
-            type="Start"
-            style={btnstyle}
-            variant="contained"
-            color="success"
-            onClick={() => setIsActive(true)}
-          >
-            Start
-          </Button>
+          <div>
+            <h2 className="timeScore">{counter}</h2>
+          </div>
         </Card>
       </Grid>
 
