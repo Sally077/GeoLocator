@@ -73,12 +73,15 @@ Github repo:  https://github.com/Sally077/geolocator
 
 ## Screenshots
 
+The following image shpws the start page:
+
+![the start page](./src/assets/images/start-page.png)
 The following image shows the Image Grid page, from which the play is launched:
 
-![the image grid page](./src/assets/images/image-grid.png)
+![the image grid page](./src/assets/images/grid-page.png)
 
 The follwoing image shows the Google StreetView image and the Leaflet Open Street map to guess where in the world the landmark is:
-![the map page](./src/assets/images/specificImageAndMap.png)
+![the map page](./src/assets/images/map-page.png)
 
 
 ## Challenges
