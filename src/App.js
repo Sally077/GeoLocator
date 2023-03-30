@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GLGrid from './components/GLGrid';
 // import { Button } from "@material-ui/core";
 // import Map from './components/Map';
@@ -26,7 +26,7 @@ function App() {
         {/* <Header /> */}
         {/* <Home /> */}
         <GLGrid />
-        {/* <TestImages /> */}
+
     </>
   );
 }

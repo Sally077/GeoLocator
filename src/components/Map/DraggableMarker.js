@@ -1,140 +1,41 @@
-// import React, { useState } from "react";
-// import { Marker, Popup, useMapEvents} from "react-leaflet";
+import { useState, useRef } from "react";
+import { Marker, Popup } from "react-leaflet";
 
-// function DraggableMarker() {
-//     const [position, setPosition] = useState(null);
-  
-//     const handleDragEnd = (event) => {
-//       setPosition(event.target.getLatLng());
-//     };
-  
-//     const mapEvents = useMapEvents({
-//       click(event) {
-//         setPosition(event.latlng);
-//       },
-//     });
-  
-//     return (
-//       <>
-//         {position && (
-//           <Marker
-//             draggable={true}
-//             position={position}
-//             onDragend={handleDragEnd}
-//           >
-//             <Popup>Hey, you can drag me! <br />
-//                 Latitude: {position.lat.toFixed(6)}, Longitude: {position.lng.toFixed(6)}
-//             </Popup>
-//           </Marker>
-//         )}
-//       </>
-//     );
-//   }
+function DraggableMarker({ position, onMarkerDragEnd }) {
+  const markerRef = useRef(null);
+  const popupRef = useRef(null);
+  const [markerPosition, setMarkerPosition] = useState(position);
 
-//   export default DraggableMarker;
+  function handleMarkerDragEnd(event) {
+    const newMarkerPosition = event.target.getLatLng();
+    // console.log("in Draggable - handleMarkerDragEnd: new pos: ",newMarkerPosition);
+    setMarkerPosition(newMarkerPosition);
+    onMarkerDragEnd(newMarkerPosition);
+  }
 
-
-//   import React from "react";
-// import { Marker } from "react-leaflet";
-
-// function DraggableMarker({ position, onDrag }) {
-//   return (
-//     <Marker
-//       draggable={true}
-//       ondrag={(event) => onDrag(event.target.getLatLng())}
-//       position={position}
-//     ></Marker>
-//   );
-// }
-
-// export default DraggableMarker;
-
-
-// import React from "react";
-// import { Marker } from "react-leaflet";
-// import L from "leaflet";
-// import markerIcon from "./marker-icon.png";
-
-// function DraggableMarker({ setMarkerPosition }) {
-//   const icon = L.icon({
-//     iconUrl: markerIcon,
-//     iconSize: [20, 20],
-//     iconAnchor: [12, 41],
-//     popupAnchor: [1, -34],
-//   });
-
-//   const handleMarkerDrag = (e) => {
-//     setMarkerPosition(e.target.getLatLng());
-//   };
-
-//   return (
-//     <Marker
-//       draggable={true}
-//       position={[0, 0]}
-//       icon={icon}
-//       eventHandlers={{
-//         dragend: handleMarkerDrag,
-//       }}
-//     />
-//   );
-// }
-
-// export default DraggableMarker;
-
-
-// import React from "react";
-// import { Marker } from "react-leaflet";
-
-// function DraggableMarker({ position, onDrag }) {
-//   const handleDragEnd = (event) => {
-//     onDrag(event.target.getLatLng());
-//   };
-
-//   return (
-//     <Marker draggable={true} position={position} onDragend={handleDragEnd} />
-//   );
-// }
-
-// export default DraggableMarker;
-
-
-
-import React from "react";
-import { Marker, Popup, useMapEvents } from "react-leaflet";
-
-function DraggableMarker({position, updatePosition}) {
-console.log("draggable position: ",position);
-
-  const onDragEnd = (e) => {
-    updatePosition(e.target.getLatLng());
-  };
-
-  const mapEvents=useMapEvents({
-    click: e => {
-      console.log(e.latlng);
-      updatePosition(e.latlng);
-    },
-  });
-
-//console.log("position: ", position);
+  function handleClick(event) { // this functionality doesn't work currently!!!
+    const newMarkerPosition = event.target.getLatLng();
+    // console.log("in Draggable - handleClick: new pos: ",newMarkerPosition);
+    setMarkerPosition(newMarkerPosition);
+    markerRef.current?.setLatLng(newMarkerPosition);
+    onMarkerDragEnd(newMarkerPosition);
+  }
 
   return (
-    <>
-
-      {position && (
-        <Marker
-          position={position}
-          draggable={true}
-
-          onDragend={onDragEnd}
-        >
-          {console.log("position: ", position)}
-          <Popup>Hey, you can drag me! <br />
-            Latitude: {position.lat.toFixed(6)}, Longitude: {position.lng.toFixed(6)}
-          </Popup>
-        </Marker>
-      )} 
-    </>
+    <Marker
+      position={markerPosition}
+      draggable={true}
+      ref={markerRef}
+      eventHandlers={{
+        dragend: handleMarkerDragEnd,
+        click: handleClick,
+      }}
+    >
+      <Popup ref={popupRef} closeButton={false} autoClose={false}>
+        Latitude: {markerPosition.lat.toFixed(6)}, Longitude:{" "}
+        {markerPosition.lng.toFixed(6)}
+      </Popup>
+    </Marker>
   );
 }
 

@@ -61,11 +61,12 @@ import ImageGrid from "../Map/testImages";
 import Map from "../Map";
 import PlayBtn from "../utils/PlayBtn";
 import Header from "../Home/Header";
+import Timer from '../utils/Timer';
 
 function GLGrid() {
   const [playedImages, setPlayedImages] = useState([]);
-
   const [selectedImageId, setSelectedImageId] = useState(null);
+  const [counter, setCounter] = useState(100);
 
   const handlePlayButtonClick = () => {
     // Select a random image that hasn't been played yet
@@ -93,8 +94,11 @@ function GLGrid() {
   return (
     <>
       <Header />
-      {selectedImageId ? (
+      {selectedImageId ? ( 
+        <>
+        <Timer counter={counter} setCounter={setCounter}/>
         <Map id={selectedImageId} onReturn={handleMapReturn} />
+        </>
       ) : (
         <>
           <PlayBtn onClick={handlePlayButtonClick}></PlayBtn>
